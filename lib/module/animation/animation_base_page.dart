@@ -26,7 +26,8 @@ class _AnimatinBasePageState extends State<AnimationBasePage> {
     print("base-arg:${widget.testTxt}");
 
     _list..add("scale_ani")
-         ..add("hero_ani");
+         ..add("hero_ani")
+         ..add("stagger_ani");
     setState(() {
       isDataInited = true;
     });
@@ -64,6 +65,8 @@ class _AnimatinBasePageState extends State<AnimationBasePage> {
       Navigator.pushNamed(context, mRoutes.animationScalePage, arguments: argMap);
     } else if ("hero_ani" == itemTxt) {
       Navigator.pushNamed(context, mRoutes.aniHeroAPage);
+    } else if("stagger_ani" == itemTxt) {
+      Navigator.pushNamed(context, mRoutes.aniStaggerPage);
     }
   }
 }
