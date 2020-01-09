@@ -54,9 +54,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _tapItem(String itemTxt) {
     if("Animation" == itemTxt) { //动画page
-      Navigator.pushNamed(context, mRoutes.animationBasePage);
+      Navigator.pushNamed(context, mRoutes.animationBasePage, arguments: "哈哈一笑");
     } else if("Event" == itemTxt) { //事件page
-
+      Navigator.pushNamed(context, "fkjflsdjfjd");
     }
   }
 }

@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
 class AnimationScalePage extends StatefulWidget {
+  final testTitle;
+  final testSub;
+
+  const AnimationScalePage({Key key, this.testTitle, this.testSub}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() {
     return _AniamtionScalePageState();
@@ -15,6 +20,8 @@ class _AniamtionScalePageState extends State<AnimationScalePage> with SingleTick
   @override
   void initState() {
     super.initState();
+    print("scale-arg:${widget.testTitle}---${widget.testSub}");
+
     controller = new AnimationController(
         duration: const Duration(seconds: 3),
         vsync: this

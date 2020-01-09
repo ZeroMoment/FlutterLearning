@@ -1,7 +1,13 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_learning/route/routes.dart' as mRoutes;
 
 class AnimationBasePage extends StatefulWidget {
+  final testTxt;
+
+  const AnimationBasePage({Key key, this.testTxt}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() {
     return _AnimatinBasePageState();
@@ -17,8 +23,10 @@ class _AnimatinBasePageState extends State<AnimationBasePage> {
   @override
   void initState() {
     super.initState();
+    print("base-arg:${widget.testTxt}");
+
     _list..add("scale_ani")
-         ..add("tween_ani");
+         ..add("hero_ani");
     setState(() {
       isDataInited = true;
     });
@@ -50,7 +58,12 @@ class _AnimatinBasePageState extends State<AnimationBasePage> {
 
   void _tapItem(String itemTxt) {
     if("scale_ani" == itemTxt) { //动画page
-      Navigator.pushNamed(context, mRoutes.animationScalePage);
+      Map argMap = Map();
+      argMap["test_title"] = "11111";
+      argMap["test_sub"] = "22222";
+      Navigator.pushNamed(context, mRoutes.animationScalePage, arguments: argMap);
+    } else if ("hero_ani" == itemTxt) {
+      Navigator.pushNamed(context, mRoutes.aniHeroAPage);
     }
   }
 }
