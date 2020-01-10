@@ -27,7 +27,9 @@ class _AnimatinBasePageState extends State<AnimationBasePage> {
 
     _list..add("scale_ani")
          ..add("hero_ani")
-         ..add("stagger_ani");
+         ..add("stagger_ani")
+         ..add("switcher_ani")
+         ..add("widget_ani");
     setState(() {
       isDataInited = true;
     });
@@ -67,6 +69,10 @@ class _AnimatinBasePageState extends State<AnimationBasePage> {
       Navigator.pushNamed(context, mRoutes.aniHeroAPage);
     } else if("stagger_ani" == itemTxt) {
       Navigator.pushNamed(context, mRoutes.aniStaggerPage);
+    } else if("switcher_ani" == itemTxt) {
+      Navigator.pushNamed(context, mRoutes.aniSwitcherPage);
+    } else if("widget_ani" == itemTxt) {
+      Navigator.pushNamed(context, mRoutes.aniWidgetPage);
     }
   }
 }

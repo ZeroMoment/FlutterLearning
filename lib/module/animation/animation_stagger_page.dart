@@ -61,4 +61,9 @@ class _AnimationStaggerPageState extends State<AnimationStaggerPage> with Ticker
     );
   }
 
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 }

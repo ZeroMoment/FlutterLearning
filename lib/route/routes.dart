@@ -7,6 +7,8 @@ import 'package:flutter_learning/module/animation/animation_base_page.dart';
 import 'package:flutter_learning/module/animation/animation_hero_a_page.dart';
 import 'package:flutter_learning/module/animation/animation_hero_b_page.dart';
 import 'package:flutter_learning/module/animation/animation_stagger_page.dart';
+import 'package:flutter_learning/module/animation/animation_switcher_page.dart';
+import 'package:flutter_learning/module/animation/animation_widget_page.dart';
 
 import '../home_learning.dart';
 
@@ -16,7 +18,9 @@ final String animationBasePage = '/AnimationBasePage';
 final String animationScalePage = '/AnimationScalePage';
 final String aniHeroAPage = '/AniHeroAPage';
 final String aniHeroBPage = '/AniHeroBPage';
-final String aniStaggerPage = '/AniStaggerBPage';
+final String aniStaggerPage = '/AniStaggerPage';
+final String aniSwitcherPage = '/AniSwitcherPage';
+final String aniWidgetPage = '/AniWidgetPage';
 
 // 配置路由命名信息
 final routes = {
@@ -32,6 +36,8 @@ final routes = {
    aniHeroAPage: (context) => AnimationHeroAPage(),
    aniHeroBPage: (context) => AnimationHeroBPage(),
    aniStaggerPage: (context) => AnimationStaggerPage(),
+   aniSwitcherPage: (context) => AnimationSwitcherPage(),
+   aniWidgetPage: (context) => AnimationdWidgetPage()
 
 };
 
