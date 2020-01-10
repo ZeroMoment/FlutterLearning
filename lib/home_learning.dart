@@ -20,7 +20,7 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
     print("init state......");
     _list..add("Animation")
-      ..add("Event");
+      ..add("Shared");
 
     setState(() {
       isDataInited = true;
@@ -55,8 +55,8 @@ class _MyHomePageState extends State<MyHomePage> {
   void _tapItem(String itemTxt) {
     if("Animation" == itemTxt) { //动画page
       Navigator.pushNamed(context, mRoutes.animationBasePage, arguments: "哈哈一笑");
-    } else if("Event" == itemTxt) { //事件page
-      Navigator.pushNamed(context, "fkjflsdjfjd");
+    } else if("Shared" == itemTxt) { //共享page
+      Navigator.pushNamed(context, mRoutes.sharedBasePage);
     }
   }
 }
