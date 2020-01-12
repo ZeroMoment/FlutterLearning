@@ -1,10 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/model/counter_model.dart';
 import 'package:flutter_learning/route/routes.dart' as mRoutes;
 import 'package:flutter_learning/route/scale_route.dart';
+import 'package:provider/provider.dart';
 
 import 'module/animation/animation_scale_page.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  final counter = CounterModel();
+  final textSize = 48;
+
+  runApp(Provider<int>.value(
+    value: textSize,
+    child: ChangeNotifierProvider.value(
+      value: counter,
+      child: MyApp(),
+    ),
+  ));
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -30,13 +43,13 @@ class MyApp extends StatelessWidget {
         });
       },
       theme: ThemeData(
-          primarySwatch: Colors.blue,
+        primarySwatch: Colors.blue,
 //全局路由过渡动画
 //          pageTransitionsTheme: PageTransitionsTheme(builders: {
 //            TargetPlatform.android: GlobalTransitionRoute(),
 //            TargetPlatform.iOS: GlobalTransitionRoute()
 //          })
-          ),
+      ),
     );
   }
 }

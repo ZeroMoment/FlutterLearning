@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/shared/share_data_widget.dart';
+import 'package:flutter_learning/module/shared/share_data_widget.dart';
 
 class InheritedTestPage extends StatefulWidget {
   @override

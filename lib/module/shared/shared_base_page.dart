@@ -54,7 +54,7 @@ class _SharedBasePageState extends State<SharedBasePage> {
     if("shared_inherited" == itemTxt) {
       Navigator.pushNamed(context, mRoutes.sharedInheritedPage);
     } else if("shared_provider" == itemTxt) {
-      Navigator.pushNamed(context, mRoutes.aniWidgetPage);
+      Navigator.pushNamed(context, mRoutes.sharedProvider1Page);
     }
   }
 }
