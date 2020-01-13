@@ -4,6 +4,7 @@ import 'package:flutter_learning/route/routes.dart' as mRoutes;
 import 'package:flutter_learning/route/scale_route.dart';
 import 'package:provider/provider.dart';
 
+import 'model/singleton.dart';
 import 'module/animation/animation_scale_page.dart';
 
 void main() {
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       title: 'Flutter Learning',
       initialRoute: mRoutes.home,
