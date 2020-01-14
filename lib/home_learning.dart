@@ -20,7 +20,8 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
     print("init state......");
     _list..add("Animation")
-      ..add("Shared");
+      ..add("Shared")
+      ..add("MethodChannel");
 
     setState(() {
       isDataInited = true;
@@ -57,6 +58,8 @@ class _MyHomePageState extends State<MyHomePage> {
       Navigator.pushNamed(context, mRoutes.animationBasePage, arguments: "哈哈一笑");
     } else if("Shared" == itemTxt) { //共享page
       Navigator.pushNamed(context, mRoutes.sharedBasePage);
+    } else if("MethodChannel" == itemTxt) {
+      Navigator.pushNamed(context, mRoutes.methodChannelPage);
     }
   }
 }

@@ -1,5 +1,3 @@
-
-
 import 'dart:core';
 
 import 'package:flutter/material.dart';
@@ -9,6 +7,8 @@ import 'package:flutter_learning/module/animation/animation_hero_b_page.dart';
 import 'package:flutter_learning/module/animation/animation_stagger_page.dart';
 import 'package:flutter_learning/module/animation/animation_switcher_page.dart';
 import 'package:flutter_learning/module/animation/animation_widget_page.dart';
+import 'package:flutter_learning/module/methodchannel/channel_test_page.dart';
+import 'package:flutter_learning/module/shared/custom_notification_page.dart';
 import 'package:flutter_learning/module/shared/inherited_test_page.dart';
 import 'package:flutter_learning/module/shared/provider_test1_page.dart';
 import 'package:flutter_learning/module/shared/provider_test2_page.dart';
@@ -30,11 +30,17 @@ final String sharedBasePage = '/SharedBasePage';
 final String sharedInheritedPage = '/SharedInheritedPage';
 final String sharedProvider1Page = '/SharedProvider1Page';
 final String sharedProvider2Page = '/SharedProvider2Page';
+final String sharedNotificationPage = '/SharedNotificationPage';
+
+final String methodChannelPage = '/MethodChannelPage';
+
 
 // 配置路由命名信息
 final routes = {
   home: (context) => MyHomePage(title: 'Flutter Learning Home Page'),
-  animationBasePage: (context) => AnimationBasePage(testTxt: ModalRoute.of(context).settings.arguments,),
+  animationBasePage: (context) => AnimationBasePage(
+        testTxt: ModalRoute.of(context).settings.arguments,
+      ),
 //  animationScalePage: (context) { 单独设置了路由过渡，不需要在这处理，onGenerateRoute
 //    Map arguments = ModalRoute.of(context).settings.arguments;
 //    return AnimationScalePage(
@@ -42,17 +48,19 @@ final routes = {
 //      testSub: arguments["test_sub"],
 //    );
 //  },
-   aniHeroAPage: (context) => AnimationHeroAPage(),
-   aniHeroBPage: (context) => AnimationHeroBPage(),
-   aniStaggerPage: (context) => AnimationStaggerPage(),
-   aniSwitcherPage: (context) => AnimationSwitcherPage(),
-   aniWidgetPage: (context) => AnimationdWidgetPage(),
+  aniHeroAPage: (context) => AnimationHeroAPage(),
+  aniHeroBPage: (context) => AnimationHeroBPage(),
+  aniStaggerPage: (context) => AnimationStaggerPage(),
+  aniSwitcherPage: (context) => AnimationSwitcherPage(),
+  aniWidgetPage: (context) => AnimationdWidgetPage(),
 
-   sharedBasePage: (context) => SharedBasePage(),
-  sharedInheritedPage : (context) => InheritedTestPage(),
+  sharedBasePage: (context) => SharedBasePage(),
+  sharedInheritedPage: (context) => InheritedTestPage(),
   sharedProvider1Page: (context) => ProviderTest1Page(),
-  sharedProvider2Page : (context) => ProviderTest2Page()
+  sharedProvider2Page: (context) => ProviderTest2Page(),
+  sharedNotificationPage: (context) => CustomNotificationPage(),
 
+  methodChannelPage :(context) => ChannelTestPage()
 };
 
 class UnknownPage extends StatelessWidget {

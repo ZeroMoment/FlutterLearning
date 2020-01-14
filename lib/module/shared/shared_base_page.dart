@@ -8,19 +8,19 @@ class SharedBasePage extends StatefulWidget {
   State<StatefulWidget> createState() {
     return _SharedBasePageState();
   }
-
 }
 
 class _SharedBasePageState extends State<SharedBasePage> {
-
   bool isDataInited = false;
   List<String> _list = List();
 
   @override
   void initState() {
     super.initState();
-    _list..add("shared_inherited")
-         ..add("shared_provider");
+    _list
+      ..add("shared_inherited")
+      ..add("shared_provider")
+      ..add("shared_notification");
     setState(() {
       isDataInited = true;
     });
@@ -32,29 +32,31 @@ class _SharedBasePageState extends State<SharedBasePage> {
       appBar: AppBar(
         title: Text("Shared Base"),
       ),
-       body: isDataInited ?
-    ListView.builder(
-    itemCount: _list.length,
-        itemExtent: 50.0,
-        itemBuilder: (BuildContext context, int index) {
-          return ListTile(
-            title: Text(_list[index]),
-            onTap: () {
-              _tapItem(_list[index]);
-            },
-          );
-        }
-    ) : Center(
-    child: Text("加载中..."),
-    ),
+      body: isDataInited
+          ? ListView.builder(
+              itemCount: _list.length,
+              itemExtent: 50.0,
+              itemBuilder: (BuildContext context, int index) {
+                return ListTile(
+                  title: Text(_list[index]),
+                  onTap: () {
+                    _tapItem(_list[index]);
+                  },
+                );
+              })
+          : Center(
+              child: Text("加载中..."),
+            ),
     );
   }
 
   void _tapItem(String itemTxt) {
-    if("shared_inherited" == itemTxt) {
+    if ("shared_inherited" == itemTxt) {
       Navigator.pushNamed(context, mRoutes.sharedInheritedPage);
-    } else if("shared_provider" == itemTxt) {
+    } else if ("shared_provider" == itemTxt) {
       Navigator.pushNamed(context, mRoutes.sharedProvider1Page);
+    } else if ("shared_notification" == itemTxt) {
+      Navigator.pushNamed(context, mRoutes.sharedNotificationPage);
     }
   }
 }
