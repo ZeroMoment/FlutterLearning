@@ -1,22 +1,13 @@
 package com.learning.flutter_learning;
 
-import android.content.Context;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.os.ParcelUuid;
-import android.view.View;
 
 import com.learning.flutter_learning.utils.ChannelViewFactory;
 
 import io.flutter.Log;
 import io.flutter.app.FlutterActivity;
-import io.flutter.plugin.common.BinaryMessenger;
-import io.flutter.plugin.common.MessageCodec;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
-import io.flutter.plugin.common.StandardMessageCodec;
-import io.flutter.plugin.platform.PlatformView;
-import io.flutter.plugin.platform.PlatformViewFactory;
 import io.flutter.plugins.GeneratedPluginRegistrant;
 
 public class MainActivity extends FlutterActivity {
