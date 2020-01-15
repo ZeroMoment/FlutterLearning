@@ -1,4 +1,4 @@
-
+import 'package:flutter_learning/route/routes.dart' as mRoutes;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -31,6 +31,14 @@ class _ChannelTestPageState extends State<ChannelTestPage> {
           RaisedButton(
             onPressed: handleButtonClick,
             child: Text('update from platform'),
+          ),
+          RaisedButton(
+            onPressed: ()=> Navigator.pushNamed(context, mRoutes.channelViewPage),
+            child: Text('channel view page'),
+          ),
+          RaisedButton(
+            onPressed: ()=> Navigator.pushNamed(context, mRoutes.channelContolViewPage),
+            child: Text('control view page'),
           )
         ],
       ),

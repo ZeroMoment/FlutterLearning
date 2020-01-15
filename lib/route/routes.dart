@@ -8,6 +8,8 @@ import 'package:flutter_learning/module/animation/animation_stagger_page.dart';
 import 'package:flutter_learning/module/animation/animation_switcher_page.dart';
 import 'package:flutter_learning/module/animation/animation_widget_page.dart';
 import 'package:flutter_learning/module/methodchannel/channel_test_page.dart';
+import 'package:flutter_learning/module/methodchannel/channel_view_page.dart';
+import 'package:flutter_learning/module/methodchannel/channel_viewcontrol_page.dart';
 import 'package:flutter_learning/module/shared/custom_notification_page.dart';
 import 'package:flutter_learning/module/shared/inherited_test_page.dart';
 import 'package:flutter_learning/module/shared/provider_test1_page.dart';
@@ -33,7 +35,8 @@ final String sharedProvider2Page = '/SharedProvider2Page';
 final String sharedNotificationPage = '/SharedNotificationPage';
 
 final String methodChannelPage = '/MethodChannelPage';
-
+final String channelViewPage = '/ChannelViewPage';
+final String channelContolViewPage = '/ChannelViewControlPage';
 
 // 配置路由命名信息
 final routes = {
@@ -60,7 +63,9 @@ final routes = {
   sharedProvider2Page: (context) => ProviderTest2Page(),
   sharedNotificationPage: (context) => CustomNotificationPage(),
 
-  methodChannelPage :(context) => ChannelTestPage()
+  methodChannelPage: (context) => ChannelTestPage(),
+  channelViewPage: (context) => ChannelViewPage(),
+  channelContolViewPage: (context) => ChannelViewControlPage()
 };
 
 class UnknownPage extends StatelessWidget {
