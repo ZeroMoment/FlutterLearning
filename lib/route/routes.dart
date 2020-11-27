@@ -7,6 +7,7 @@ import 'package:flutter_learning/module/animation/animation_hero_b_page.dart';
 import 'package:flutter_learning/module/animation/animation_stagger_page.dart';
 import 'package:flutter_learning/module/animation/animation_switcher_page.dart';
 import 'package:flutter_learning/module/animation/animation_widget_page.dart';
+import 'package:flutter_learning/module/customize/customize_base_page.dart';
 import 'package:flutter_learning/module/methodchannel/channel_test_page.dart';
 import 'package:flutter_learning/module/methodchannel/channel_view_page.dart';
 import 'package:flutter_learning/module/methodchannel/channel_viewcontrol_page.dart';
@@ -38,6 +39,8 @@ final String methodChannelPage = '/MethodChannelPage';
 final String channelViewPage = '/ChannelViewPage';
 final String channelContolViewPage = '/ChannelViewControlPage';
 
+final String customizeBasePage = '/CustomizeBasePage';
+
 // 配置路由命名信息
 final routes = {
   home: (context) => MyHomePage(title: 'Flutter Learning Home Page'),
@@ -65,7 +68,10 @@ final routes = {
 
   methodChannelPage: (context) => ChannelTestPage(),
   channelViewPage: (context) => ChannelViewPage(),
-  channelContolViewPage: (context) => ChannelViewControlPage()
+  channelContolViewPage: (context) => ChannelViewControlPage(),
+
+  customizeBasePage: (context) => CustomizeBasePage(),
+
 };
 
 class UnknownPage extends StatelessWidget {

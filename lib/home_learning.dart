@@ -42,7 +42,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
     _list..add("Animation")
       ..add("Shared")
-      ..add("MethodChannel");
+      ..add("MethodChannel")
+      ..add("customize");
 
   }
 
@@ -117,9 +118,13 @@ class _MyHomePageState extends State<MyHomePage> {
     if("Animation" == itemTxt) { //动画page
       Navigator.pushNamed(context, mRoutes.animationBasePage, arguments: "哈哈一笑");
     } else if("Shared" == itemTxt) { //共享page
-      Navigator.pushNamed(context, mRoutes.sharedBasePage);
+      Navigator.pushNamed(context, mRoutes.sharedBasePage).then((result) {
+        print("test- result:$result");
+      });
     } else if("MethodChannel" == itemTxt) {
       Navigator.pushNamed(context, mRoutes.methodChannelPage);
+    } else if("customize" == itemTxt) {
+      Navigator.pushNamed(context, mRoutes.customizeBasePage);
     }
   }
 

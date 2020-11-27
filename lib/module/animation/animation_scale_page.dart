@@ -23,7 +23,7 @@ class _AniamtionScalePageState extends State<AnimationScalePage> with SingleTick
     print("scale-arg:${widget.testTitle}---${widget.testSub}");
 
     controller = new AnimationController(
-        duration: const Duration(seconds: 3),
+      duration: const Duration(seconds: 3),
         vsync: this
     );
 

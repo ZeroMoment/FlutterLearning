@@ -30,6 +30,12 @@ class _SharedBasePageState extends State<SharedBasePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: GestureDetector(
+          onTap: (){
+            Navigator.of(context).pop("hah啊  测试返回的值123456");
+          },
+          child: Icon(Icons.arrow_back),
+        ),
         title: Text("Shared Base"),
       ),
       body: isDataInited
