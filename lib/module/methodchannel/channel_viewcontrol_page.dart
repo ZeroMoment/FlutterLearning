@@ -77,7 +77,7 @@ class _SampleViewState extends State<SampleView> {
   @override
   Widget build(BuildContext context) {
     if(defaultTargetPlatform == TargetPlatform.android) {
-      return AndroidView(viewType: 'sampleView',
+      return AndroidView(viewType: 'test.lzm/sampleView',
         onPlatformViewCreated: _onPlatformViewCreated,
       );
     } else {
@@ -93,6 +93,6 @@ class _SampleViewState extends State<SampleView> {
       return;
     }
 
-    widget.controller.onCreate(id);
+    widget.controller. onCreate(id);
   }
 }

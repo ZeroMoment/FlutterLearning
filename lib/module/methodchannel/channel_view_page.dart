@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 
 import 'package:flutter_learning/route/routes.dart' as mRoutes;
 
-const platform = MethodChannel('test.lzm/channel_views');
+// const platform = MethodChannel('test.lzm/channel_views');
 
 class ChannelViewPage extends StatelessWidget {
 
@@ -35,7 +35,7 @@ class ChannelViewPage extends StatelessWidget {
 
   Widget _creatChannelView() {
     if(defaultTargetPlatform == TargetPlatform.android) {
-      return AndroidView(viewType: 'channelView');
+      return AndroidView(viewType: 'test.lzm/channelView');
     } else {
       return Center(
         child: Text('ios channel 待开发'),
