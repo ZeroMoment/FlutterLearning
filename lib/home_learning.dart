@@ -43,7 +43,9 @@ class _MyHomePageState extends State<MyHomePage> {
     _list..add("Animation")
       ..add("Shared")
       ..add("MethodChannel")
-      ..add("customize");
+      ..add("customize")
+      ..add("TestBuild")
+    ;
 
   }
 
@@ -125,6 +127,8 @@ class _MyHomePageState extends State<MyHomePage> {
       Navigator.pushNamed(context, mRoutes.methodChannelPage);
     } else if("customize" == itemTxt) {
       Navigator.pushNamed(context, mRoutes.customizeBasePage);
+    } else if("TestBuild" == itemTxt) {
+      Navigator.pushNamed(context, mRoutes.testBuildBasePage);
     }
   }
 

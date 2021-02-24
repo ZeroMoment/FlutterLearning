@@ -16,6 +16,7 @@ import 'package:flutter_learning/module/shared/inherited_test_page.dart';
 import 'package:flutter_learning/module/shared/provider_test1_page.dart';
 import 'package:flutter_learning/module/shared/provider_test2_page.dart';
 import 'package:flutter_learning/module/shared/shared_base_page.dart';
+import 'package:flutter_learning/module/testbuild/base_build_page.dart';
 
 import '../home_learning.dart';
 
@@ -40,6 +41,8 @@ final String channelViewPage = '/ChannelViewPage';
 final String channelContolViewPage = '/ChannelViewControlPage';
 
 final String customizeBasePage = '/CustomizeBasePage';
+
+final String testBuildBasePage = '/BaseBuildPage';
 
 // 配置路由命名信息
 final routes = {
@@ -71,7 +74,7 @@ final routes = {
   channelContolViewPage: (context) => ChannelViewControlPage(),
 
   customizeBasePage: (context) => CustomizeBasePage(),
-
+  testBuildBasePage: (context) => BaseBuildPage(),
 };
 
 class UnknownPage extends StatelessWidget {
